@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TodoItems from "./TodoItems";
 import "./TodoList.css";
+import SimpleStorage from "react-simple-storage";
 
  
 class TodoList extends Component {
@@ -19,6 +20,7 @@ class TodoList extends Component {
     render() {
         return (
         <div className="todoListMain">
+            <SimpleStorage parent={this} />
             <div className="header">
                 <form onSubmit={this.addItem}>
                     <input ref={(a) => this._inputElement = a} 
